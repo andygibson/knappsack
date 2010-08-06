@@ -1,0 +1,116 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>${groupId}</groupId>
+	<artifactId>${artifactId}</artifactId>
+	<packaging>war</packaging>
+	<name>${artifactId}</name>
+	<version>${version}</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jboss.home>${symbol_dollar}{env.JBOSS_HOME}</jboss.home>
+		<jboss.domain>default</jboss.domain>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<!--
+			Used for app servers that do not contain slf4j (i.e. Default
+			Glassfish Install)
+		-->
+		<!-- 
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-jdk14</artifactId>
+			<version>1.5.8</version>
+			<scope>compile</scope>
+		</dependency>
+ 		-->
+
+
+		<!--
+			Default Implementation that carries additional validators. Should be
+			removed in the event of the server using an alternate validations
+			implementation
+		-->
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.0.0.GA</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+	<repositories>
+		<!-- Used for main Java EE 6 super pom -->
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://download.java.net/maven/2/</url>
+			<layout>default</layout>
+		</repository>
+
+
+		<!-- JBoss Repository used for hibernate-validator 4.0.0.GA -->
+		<repository>
+			<id>repository.jboss.org</id>
+			<name>JBoss Repository</name>
+			<url>http://repository.jboss.org/maven2/</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<finalName>${artifactId}</finalName>
+		<plugins>
+			<!--  Facilitates downloading source and javadoc in Eclipse -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+					<wtpversion>2.0</wtpversion>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>true</downloadJavadocs>
+				</configuration>
+			</plugin>
+
+
+			<!--  Ensures we are compiling at 1.6 level -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			
+			<!-- JBoss AS plugin for command line deployment -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jboss-maven-plugin</artifactId>
+				<configuration>
+					<jbossHome>${symbol_dollar}{jboss.home}</jbossHome>
+					<serverName>${symbol_dollar}{jboss.domain}</serverName>
+					<fileNames>
+						<fileName>${symbol_dollar}{project.build.directory}/${symbol_dollar}{build.finalName}.war</fileName>
+					</fileNames>
+				</configuration>
+			</plugin>
+			
+		</plugins>
+	</build>
+</project>

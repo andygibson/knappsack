@@ -1,0 +1,103 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:fc="http://java.sun.com/jsf/composite/fluttercode/component"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	template="/WEB-INF/templates/template.xhtml">
+	<ui:define name="content">
+
+		<f:metadata>
+			<f:viewParam name="firstResult" value="${symbol_pound}{studentSearch.firstResult}" />
+			<f:viewParam name="pageSize" value="${symbol_pound}{studentSearch.pageSize}" />
+			<f:viewParam name="firstName"
+				value="${symbol_pound}{studentSearch.criteria.firstName}" />
+			<f:viewParam name="lastName"
+				value="${symbol_pound}{studentSearch.criteria.lastName}" />
+			<f:viewParam name="teacherId"
+				value="${symbol_pound}{studentSearch.criteria.teacherId}" />
+
+		</f:metadata>
+
+		<h:outputScript name="jsf.js" library="javax.faces" target="head" />
+
+		<h:form id="searchForm">
+			<fc:panel caption="Search Criteria">
+				<fc:property caption="First Name" isInput="true">
+					<h:inputText value="${symbol_pound}{studentSearch.criteria.firstName}"
+						autocomplete="false"
+						valueChangeListener="${symbol_pound}{studentSearch.firstNameChangeListener}">
+						<f:ajax execute="@form" render=":searchForm:results" event="keyup" />
+					</h:inputText>
+				</fc:property>
+				<fc:property caption="Last Name" isInput="true">
+					<h:inputText value="${symbol_pound}{studentSearch.criteria.lastName}" autocomplete="false">
+						<f:ajax execute="@form" render=":searchForm:results" />
+					</h:inputText>
+				</fc:property>
+				<fc:property caption="Teacher" isInput="true">
+					<h:selectOneMenu value="${symbol_pound}{studentSearch.criteria.teacherId}">
+						<f:selectItems value="${symbol_pound}{teacherItems}" />
+						<f:ajax execute="@form" render=":searchForm:results" />
+					</h:selectOneMenu>
+				</fc:property>
+
+				<h:commandButton action="${symbol_pound}{studentSearch.refresh}" value="Search" />
+			</fc:panel>
+
+			<ui:fragment rendered="${symbol_pound}{empty studentSearch.results}">
+				<h2>No Results Found</h2>
+			</ui:fragment>
+			<ui:fragment rendered="${symbol_pound}{!empty studentSearch.results}">
+				<h:dataTable value="${symbol_pound}{studentSearch.results}" var="v_student"
+					id="results" styleClass="dataTable" rowClasses="even,odd">
+					<h:column>
+						<f:facet name="header">Id</f:facet>
+						<h:outputText value="${symbol_pound}{v_student.id}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">Name</f:facet>
+						<h:outputText value="${symbol_pound}{v_student.name}" />
+					(<h:link outcome="personView" value="details">
+							<f:param name="personId" value="${symbol_pound}{v_student.id}" />
+						</h:link>)
+				</h:column>
+
+					<h:column>
+						<f:facet name="header">Courses</f:facet>
+						<ui:repeat var="v_course" value="${symbol_pound}{v_student.enrolled}">
+							<h:link outcome="courseView">
+						${symbol_pound}{v_course.code}
+							<f:param name="courseId" value="${symbol_pound}{v_course.id}" />
+							</h:link>
+						</ui:repeat>
+					</h:column>
+				</h:dataTable>
+				<h:commandButton action="${symbol_pound}{studentSearch.first}" value="First" />
+				<h:commandButton action="${symbol_pound}{studentSearch.previous}" value="Previous"
+					rendered="${symbol_pound}{studentSearch.firstResult gt 0}" />
+				<h:commandButton action="${symbol_pound}{studentSearch.next}" value="Next"
+					disabled="${symbol_pound}{!studentSearch.nextPageAvailable}" />
+				<h:panelGroup style="border-top: 1px solid ${symbol_pound}d0d0d0; margin: 8px"
+					layout="block">
+					<h:link outcome="personEdit" value="Add New Student"
+						style="margin-right : 12px">
+						<f:param name="type" value="student" />
+					</h:link>
+
+					<h:link outcome="personEdit" value="Add New Teacher"
+						style="margin-right : 12px">
+						<f:param name="type" value="teacher" />
+					</h:link>
+
+				</h:panelGroup>
+			</ui:fragment>
+
+		</h:form>
+
+	</ui:define>
+</ui:composition>

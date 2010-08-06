@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><archetype>
+  <id>jee6-minimal</id>
+  <sources>
+    <source>src\main\java\org\fluttercode\knappsack\jee6_minimal\qualifier\DataRepository.java</source>
+    <source>src\main\java\org\fluttercode\knappsack\jee6_minimal\bean\DataRepositoryProducer.java</source>
+    <source>src\main\java\org\fluttercode\knappsack\jee6_minimal\bean\DataRepositoryProducerLocal.java</source>
+    <source>src\main\java\org\fluttercode\knappsack\jee6_minimal\view\HelloBean.java</source>
+    <source>src\main\java\org\fluttercode\knappsack\jee6_minimal\model\Person.java</source>
+    <source>src\main\java\org\fluttercode\knappsack\jee6_minimal\view\PersonBean.java</source>
+    <source>src\main\java\org\fluttercode\knappsack\jee6_minimal\bean\PersonDao.java</source>
+    <source>src\main\java\org\fluttercode\knappsack\jee6_minimal\bean\PersonDaoLocal.java</source>
+  </sources>
+  <resources>
+    <resource>src\main\resources\import.sql</resource>
+    <resource>src\main\resources\META-INF\persistence.xml</resource>
+    <resource>src\main\webapp\home.xhtml</resource>
+    <resource>src\main\webapp\index.html</resource>
+    <resource>src\main\webapp\META-INF\MANIFEST.MF</resource>
+    <resource>src\main\webapp\resources\css\screen.css</resource>
+    <resource>src\main\webapp\WEB-INF\beans.xml</resource>
+    <resource>src\main\webapp\WEB-INF\faces-config.xml</resource>
+    <resource>src\main\webapp\WEB-INF\templates\template.xhtml</resource>
+    <resource>src\main\webapp\WEB-INF\web.xml</resource>
+    <resource>readme.txt</resource>
+  </resources>
+</archetype>

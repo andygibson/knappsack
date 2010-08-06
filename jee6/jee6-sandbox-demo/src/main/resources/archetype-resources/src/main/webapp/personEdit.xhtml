@@ -1,0 +1,84 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:fc="http://java.sun.com/jsf/composite/fluttercode/component"
+	template="/WEB-INF/templates/template.xhtml">
+	<ui:define name="content">
+		<f:metadata>
+			<f:viewParam name="personId" value="${symbol_pound}{personHome.id}" />
+			<f:viewParam name="type" value="${symbol_pound}{personHome.newType}" />
+			<f:event type="preRenderView" listener="${symbol_pound}{personHome.init(true)}" />
+		</f:metadata>
+		<h:form id="personEdit">
+			<fc:panel>
+
+				<h1><h:outputText value="Edit : ${symbol_pound}{personHome.person.name}"
+					rendered="${symbol_pound}{personHome.managed}" /> <h:outputText
+					value="Create New ${symbol_pound}{personHome.isStudent ? 'Student' : 'Teacher'}"
+					rendered="${symbol_pound}{!personHome.managed}" /></h1>
+
+
+				<fc:property caption="Id">${symbol_pound}{personHome.person.id}</fc:property>
+				
+				<fc:property caption="First Name">
+					<h:inputText value="${symbol_pound}{personHome.person.firstName}" id="firstName"
+						styleClass="value" />
+					<h:message for="firstName" styleClass="errorMessage" />
+				</fc:property>
+
+				<fc:property caption="Last Name">
+					<h:inputText value="${symbol_pound}{personHome.person.lastName}" id="lastName"
+						styleClass="value" />
+					<h:message for="lastName" styleClass="errorMessage" />
+				</fc:property>
+
+
+				<fc:property caption="GPA" rendered="${symbol_pound}{personHome.isStudent}">					
+					<h:inputText value="${symbol_pound}{personHome.student.gpa}" styleClass="value"
+						id="gpa" />
+					<h:message for="gpa" styleClass="errorMessage" />
+				</fc:property>
+
+				<h:panelGrid columns="3" rendered="${symbol_pound}{personHome.isStudent}">
+					<h:outputText value="Available Courses" />
+					<h:outputText value="" />
+					<h:outputText value="Enrolled Courses" />
+					<h:selectManyListbox
+						value="${symbol_pound}{courseAssignment.selectedAvailableCourses}"
+						style="height : 120px">
+						<f:selectItems value="${symbol_pound}{courseAssignment.availableCoursesItems}" />
+					</h:selectManyListbox>
+					<h:panelGroup layout="block">
+						<h:commandButton value="Add >>" style="width : 100px;margin : 4px"
+							actionListener="${symbol_pound}{courseAssignment.addStudentToSelectedCourses}">
+						</h:commandButton>
+						<br />
+						<h:commandButton value="&lt;&lt; Remove"
+							action="${symbol_pound}{courseAssignment.removeStudentFromSelectedCourses}"
+							style="width : 100px;margin : 4px" />
+					</h:panelGroup>
+					<h:selectManyListbox
+						value="${symbol_pound}{courseAssignment.selectedEnrolledCourses}"
+						style="height : 120px">
+						<f:selectItems value="${symbol_pound}{courseAssignment.enrolledCoursesItems}" />
+					</h:selectManyListbox>
+
+				</h:panelGrid>
+			</fc:panel>
+
+
+
+			<h:commandButton action="${symbol_pound}{personHome.save}" value="Save"
+				style="margin-right : 12px" />
+
+			<h:commandButton action="${symbol_pound}{personHome.cancel}" value="Cancel"
+				immediate="true" />
+		</h:form>
+	</ui:define>
+</ui:composition>

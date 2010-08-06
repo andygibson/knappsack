@@ -1,0 +1,59 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/template.xhtml">
+	<ui:define name="content">
+		<h:panelGroup layout="block" styleClass="panel">
+			<h1>Access CDI bean from JSF</h1>
+		Your CDI bean <code>helloBean</code> says "${symbol_pound}{helloBean.helloMessage}"<br />
+			<br />
+		</h:panelGroup>
+		<h:form id="helloForm">
+
+			<h:panelGroup layout="block" styleClass="panel">
+				<h1>JSF interacting with CDI</h1>
+      Enter Name<br />
+				<h:inputText value="${symbol_pound}{helloBean.name}" />
+				<br />
+				<h:commandButton value="Submit" />
+				<br />
+      Message : <h:outputText value="${symbol_pound}{helloBean.message}" />
+			</h:panelGroup>
+		</h:form>
+
+		<h:panelGroup layout="block" styleClass="panel">
+			<h1>JPA, CDI, JSF and Validation</h1>
+			<small>Try leaving values blank or making them longer than 25
+			chars</small>
+			<br />
+			<br />
+
+			<h:form id="personEdit">
+      			FirstName<br />
+				<h:inputText value="${symbol_pound}{personBean.person.firstName}" id="firstName" style="margin-right : 8px"/>
+				<h:message for="firstName" styleClass="errorMessage" />
+				<br />
+				<br />      
+			      LastName<br />
+				<h:inputText value="${symbol_pound}{personBean.person.lastName}" id="lastName" style="margin-right : 8px"/>
+				<h:message for="lastName" styleClass="errorMessage" />
+				<br />
+				<br />
+				<h:commandButton value="Add" action="${symbol_pound}{personBean.savePerson}" />
+			</h:form>
+			<br />
+			<small>The validation logic is coming from the annotations
+			we added to the model</small>			
+
+			<h3 style="text-decoration: underline;">List of People</h3>
+			<ui:repeat var="v_person" value="${symbol_pound}{personBean.people}">
+		${symbol_pound}{v_person.firstName} ${symbol_pound}{v_person.lastName}<br />
+			</ui:repeat>
+		</h:panelGroup>
+	</ui:define>
+</ui:composition>

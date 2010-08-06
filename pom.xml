@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.fluttercode.knappsack</groupId>
+	<artifactId>knappsack-archetype-parent</artifactId>
+	<version>1.0.2</version>
+	<packaging>pom</packaging>
+
+
+	<name>Knappsack Archetypes Build Aggregator</name>
+	<description>Aggregator and parent to the Knappsack archetype modules.</description>
+
+	<url>http://www.andygibson.net/blog/projects/knappsack/</url>
+
+	<developers>
+		<developer>
+			<name>Andy Gibson</name>
+			<roles>
+				<role>Developer</role>
+			</roles>
+			<email>contact@andygibson.net</email>
+			<url>www.andygibson.net</url>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<connection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/</connection>
+		<developerConnection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/</developerConnection>
+		<url>https://myprojects.sourcerepo.com/myprojects/archetypes/</url>
+	</scm>
+
+
+
+	<modules>
+		<module>jee6/jee6-basic</module>
+		<module>jee6/jee6-minimal</module>
+		<module>jee6/jee6-sandbox</module>
+		<module>jee6/jee6-sandbox-demo</module>
+		<module>jee6/jee6-servlet-basic</module>
+		<module>jee6/jee6-servlet-minimal</module>
+	</modules>
+
+	<build>
+		<finalName>${artifactId}-${version}</finalName>
+	</build>
+
+</project>

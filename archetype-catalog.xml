@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-catalog>
+  <archetypes>
+    <archetype>
+      <groupId>org.fluttercode.knappsack</groupId>
+      <artifactId>jee6-minimal-archetype</artifactId>
+      <version>1.0.2</version>
+    </archetype>
+
+    <archetype>
+      <groupId>org.fluttercode.knappsack</groupId>
+      <artifactId>jee6-basic-archetype</artifactId>
+      <version>1.0.2</version>
+    </archetype>
+
+    <archetype>
+      <groupId>org.fluttercode.knappsack</groupId>
+      <artifactId>jee6-sandbox-archetype</artifactId>
+      <version>1.0.2</version>
+    </archetype>
+
+    <archetype>
+      <groupId>org.fluttercode.knappsack</groupId>
+      <artifactId>jee6-sandbox-demo-archetype</artifactId>
+      <version>1.0.2</version>
+    </archetype>
+
+    <archetype>
+      <groupId>org.fluttercode.knappsack</groupId>
+      <artifactId>jee6-servlet-basic-archetype</artifactId>
+      <version>1.0.2</version>
+    </archetype>
+
+    <archetype>
+      <groupId>org.fluttercode.knappsack</groupId>
+      <artifactId>jee6-servlet-minimal-archetype</artifactId>
+      <version>1.0.2</version>
+    </archetype>
+
+  </archetypes>
+</archetype-catalog>

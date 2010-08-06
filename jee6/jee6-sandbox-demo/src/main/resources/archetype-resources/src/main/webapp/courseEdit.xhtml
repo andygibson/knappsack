@@ -1,0 +1,49 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:fc="http://java.sun.com/jsf/composite/fluttercode/component"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	template="/WEB-INF/templates/template.xhtml">
+	<ui:define name="content">
+		<f:metadata>
+			<f:viewParam name="courseId" value="${symbol_pound}{courseHome.id}" />
+			<f:event type="preRenderView" listener="${symbol_pound}{courseHome.init(true)}" />
+		</f:metadata>
+
+		<h:form>
+			<fc:panel
+				caption="${symbol_pound}{courseHome.course.code} - ${symbol_pound}{courseHome.course.title}">
+				<fc:property caption="Id">
+					<h:outputText value="${symbol_pound}{courseHome.course.id}" styleClass="value" />
+				</fc:property>
+
+				<fc:property caption="Code">
+					<h:inputText value="${symbol_pound}{courseHome.course.code}" styleClass="value"
+						id="code" />
+					<h:message for="code" styleClass="errorMessage" />
+				</fc:property>
+				<fc:property caption="Title">
+					<h:inputText value="${symbol_pound}{courseHome.course.title}" styleClass="value"
+						id="title" />
+					<h:message for="title" styleClass="errorMessage" />
+				</fc:property>
+				<fc:property caption="Teacher">
+					<h:selectOneMenu value="${symbol_pound}{courseHome.teacherId}" id="teacher">
+						<f:selectItems value="${symbol_pound}{teacherItems}" />
+					</h:selectOneMenu>
+					<h:message for="teacher" styleClass="errorMessage" />
+				</fc:property>
+			</fc:panel>
+
+			<h:commandButton action="${symbol_pound}{courseHome.save}" value="Save"
+				style="margin-right : 12px" />
+			<h:commandButton action="${symbol_pound}{courseHome.cancel}" value="Cancel"
+				immediate="true" />
+		</h:form>
+	</ui:define>
+</ui:composition>

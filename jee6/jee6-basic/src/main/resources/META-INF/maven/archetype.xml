@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><archetype>
+  <id>jee6-basic</id>
+  <sources>
+    <source>src\main\java\org\fluttercode\artifacts\jee6basic\producers\EntityManagerProducer.java</source>
+    <source>src\main\java\org\fluttercode\artifacts\jee6basic\producers\EntityManagerProducerLocal.java</source>
+    <source>src\main\java\org\fluttercode\artifacts\jee6basic\qualifiers\DataRepository.java</source>
+  </sources>
+  <resources>
+    <resource>src\main\resources\import.sql</resource>
+    <resource>src\main\resources\META-INF\persistence.xml</resource>
+    <resource>src\main\webapp\home.xhtml</resource>
+    <resource>src\main\webapp\index.html</resource>
+    <resource>src\main\webapp\META-INF\MANIFEST.MF</resource>
+    <resource>src\main\webapp\resources\css\screen.css</resource>
+    <resource>src\main\webapp\WEB-INF\beans.xml</resource>
+    <resource>src\main\webapp\WEB-INF\faces-config.xml</resource>
+    <resource>src\main\webapp\WEB-INF\templates\template.xhtml</resource>
+    <resource>src\main\webapp\WEB-INF\web.xml</resource>
+    <resource>readme.txt</resource>
+  </resources>
+</archetype>

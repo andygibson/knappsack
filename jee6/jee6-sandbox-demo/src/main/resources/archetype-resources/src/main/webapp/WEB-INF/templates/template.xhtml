@@ -1,0 +1,66 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title>${artifactId} Application</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<h:outputStylesheet name="css/screen.css" />
+</h:head>
+<h:body>
+	<h:panelGroup id="page" layout="block">
+		<a href="home.jsf">
+			<h:panelGroup id="header" layout="block">
+				<h1>${artifactId}</h1>
+				<small>${symbol_pound}{dataStatus}</small>
+			</h:panelGroup>
+		</a>
+		<h:panelGroup id="container" layout="block">
+			<h:panelGroup id="sidebar" layout="block" styleClass="panel">
+				<h1>Teachers</h1>
+				<h:dataTable value="${symbol_pound}{teacherCourseCounts}" var="v_teacher">
+					<h:column>
+						<f:facet name="header">Name</f:facet>
+						<h:outputLink value="home.jsf">
+							${symbol_pound}{v_teacher.name}
+								<f:param name="teacherId" value="${symbol_pound}{v_teacher.id}" />
+						</h:outputLink>
+
+					</h:column>
+
+					<h:column>
+						<f:facet name="header">Courses</f:facet>
+						<h:outputText value="(${symbol_pound}{v_teacher.count})" />
+					</h:column>
+
+					<h:column>
+
+						<h:outputLink value="personView.jsf">
+							view
+								<f:param name="personId" value="${symbol_pound}{v_teacher.id}" />
+						</h:outputLink>
+
+					</h:column>
+
+
+
+
+					<br />
+				</h:dataTable>
+			</h:panelGroup>
+
+			<h:panelGroup id="content" layout="block">
+				<ui:insert name="content">Main Content</ui:insert>
+			</h:panelGroup>
+		</h:panelGroup>
+		<h:panelGroup id="footer" layout="block">Footer goes Here<br/>Generated using the Knappsack Java EE Maven Archetypes from <a href="http://www.AndyGibson.net">www.AndyGibson.net</a></h:panelGroup>
+	</h:panelGroup>
+
+</h:body>
+</html>

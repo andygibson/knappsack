@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><archetype>
+  <id>jee6-minimal</id>
+  <sources>
+    <source>src\main\java\DataRepository.java</source>
+    <source>src\main\java\DataRepositoryProducer.java</source>
+    <source>src\main\java\HelloBean.java</source>
+    <source>src\main\java\Person.java</source>
+  </sources>
+  <resources>
+    <resource>src\main\resources\META-INF\persistence.xml</resource>
+    <resource>src\main\resources\META-INF\beans.xml</resource>
+    <resource>src\main\webapp\home.xhtml</resource>
+    <resource>src\main\webapp\index.html</resource>
+    <resource>src\main\webapp\META-INF\MANIFEST.MF</resource>
+    <resource>src\main\webapp\META-INF\context.xml</resource>
+    <resource>src\main\webapp\resources\css\screen.css</resource>
+    <resource>src\main\webapp\WEB-INF\jetty-env.xml</resource>
+    <resource>src\main\webapp\WEB-INF\faces-config.xml</resource>
+    <resource>src\main\webapp\WEB-INF\templates\template.xhtml</resource>
+    <resource>src\main\webapp\WEB-INF\web.xml</resource>
+    <resource>readme.txt</resource>
+  </resources>
+</archetype>

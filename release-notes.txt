@@ -1,0 +1,23 @@
+2010-08-06 version 1.0.2 released
+
+Added 2 servlet based archetypes for using with jetty/Tomcat
+Reduced the pom.xml file using the Java EE 6 super POM
+
+
+2010-07-28 Version 1.0.1 released
+
+Fixed join fetch in the sanbox data factory
+Removed fluttercode.com references
+Fixed a typo or two
+
+
+2010-06-29 Service Pack 1 Released 
+
+Removed the aliases left join fetch as it was not JPA compatible.
+Added reference to the deployment page on fluttercode.com
+Improved the Glassfish integration
+Cleaned up the pom.xml files, removed some dependencies
+Fixed hibernate "from <table>" specific syntax in the data factory.
+Include index.html and remove index.jsp from the archetype
+
+2010-06-28 - Initial Release

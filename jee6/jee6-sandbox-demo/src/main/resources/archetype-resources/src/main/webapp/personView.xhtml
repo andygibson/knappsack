@@ -1,0 +1,67 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:fc="http://java.sun.com/jsf/composite/fluttercode/component"
+	template="/WEB-INF/templates/template.xhtml">
+	<ui:define name="content">
+		<f:metadata>
+			<f:viewParam name="personId" value="${symbol_pound}{personHome.id}" />
+			<f:event type="preRenderView" listener="${symbol_pound}{personHome.init(false)}" />
+		</f:metadata>
+
+		<h:form>
+
+
+			<fc:panel
+				caption="${symbol_pound}{personHome.isTeacher ? 'Teacher : ' : 'Student : '} ${symbol_pound}{personHome.person.name}">
+				<fc:property caption="Id">${symbol_pound}{personHome.person.id}</fc:property>
+				<fc:property caption="Name">${symbol_pound}{personHome.person.name}</fc:property>
+				<fc:property caption="GPA" rendered="${symbol_pound}{personHome.isStudent}">${symbol_pound}{personHome.student.gpa}</fc:property>
+				<fc:auditInfo entity="${symbol_pound}{personHome.person}" captionClass="caption"
+					valueClass="value" />
+
+				<h:button outcome="home" value="Back to List"
+					style="margin-right  : 24px" />
+				<h:button outcome="personEdit" value="Edit Person">
+					<f:param name="personId" value="${symbol_pound}{personHome.person.id}" />
+				</h:button>
+
+			</fc:panel>
+			<fc:panel caption="${symbol_pound}{personHome.isTeacher ? 'Courses Taught' : 'Courses Enrolled'}">
+
+
+				<h:dataTable styleClass="dataTable" value="${symbol_pound}{personHome.courses}"
+					var="v_course">
+					<h:column>
+							(<h:link outcome="courseView" value="details">
+							<f:param name="courseId" value="${symbol_pound}{v_course.id}" />
+						</h:link>)
+				</h:column>
+
+					<h:column>
+						<f:facet name="header">Code</f:facet>
+						<h:outputText value="${symbol_pound}{v_course.code}" />
+					</h:column>
+
+					<h:column>
+						<f:facet name="header">Title</f:facet>
+						<h:outputText value="${symbol_pound}{v_course.title}" />
+					</h:column>
+
+					<h:column rendered="${symbol_pound}{personHome.isStudent}">
+						<f:facet name="header">Teacher</f:facet>
+						<h:outputText value="${symbol_pound}{v_course.teacher.name}" />
+					</h:column>
+
+
+				</h:dataTable>
+			</fc:panel>
+		</h:form>
+	</ui:define>
+</ui:composition>

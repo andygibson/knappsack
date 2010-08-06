@@ -1,0 +1,30 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:composite="http://java.sun.com/jsf/composite">
+
+<h:head>
+</h:head>
+<h:body>
+	<composite:interface name="panel"
+		displayName="Panel for containing content">
+
+		<composite:attribute required="false" name="caption"
+			shortDescription="Caption for the panel" />
+
+	</composite:interface>
+
+	<composite:implementation>
+		<div class="panel"><ui:fragment
+			rendered="${symbol_pound}{!(cc.attrs.caption == null)}">
+			<h1>${symbol_pound}{cc.attrs.caption}</h1>
+		</ui:fragment> <composite:insertChildren /></div>
+	</composite:implementation>
+</h:body>
+
+</html>

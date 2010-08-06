@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.fluttercode.knappsack</groupId>
+		<artifactId>knappsack-archetype-parent</artifactId>
+		<version>1.0.2</version>
+		<relativePath>../../pom.xml</relativePath>
+	</parent>
+
+	<groupId>org.fluttercode.knappsack</groupId>
+	<artifactId>jee6-servlet-minimal-archetype</artifactId>
+	<version>1.0.2</version>
+	<packaging>maven-archetype</packaging>
+	<name>Java EE 6 Servlet Minimal Archetype</name>
+	<description>Minimal Java EE application for servlet containers (Jetty,Tomcat) with a single page demo of CDI, JSF, JPA and Validation to verify everything works.</description>
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>2.0-alpha-4</version>
+			</extension>
+		</extensions>
+		<plugins>
+			<plugin>
+				<artifactId>maven-archetype-plugin</artifactId>
+				<version>2.0-alpha-4</version>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

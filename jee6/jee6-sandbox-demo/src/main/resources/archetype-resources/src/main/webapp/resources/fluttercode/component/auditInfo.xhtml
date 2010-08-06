@@ -1,0 +1,58 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:composite="http://java.sun.com/jsf/composite">
+
+<h:head>
+</h:head>
+<h:body>
+	<composite:interface name="auditInfo"
+		displayName="Audit information display">
+		<composite:attribute required="true" name="entity"
+			type="${package}.model.BaseEntity"
+			shortDescription="Base entity containing the audit information" />
+
+		<composite:attribute required="false" name="captionClass"
+			shortDescription="Style class for the captions" />
+
+		<composite:attribute required="false" name="captionStyle"
+			shortDescription="Style for the captions" />
+
+		<composite:attribute required="false" name="valueClass"
+			shortDescription="Style class for the value" />
+
+		<composite:attribute required="false" name="valueStyle"
+			shortDescription="Style for the value" />
+
+		<composite:attribute required="false" name="dateStyle"
+			shortDescription="Format for converting the date" default="long" />
+
+	</composite:interface>
+
+	<composite:implementation>
+	
+		<h:panelGroup layout="block" styleClass="property">
+			<h:outputText value="Created On" style="${symbol_pound}{cc.attrs.captionStyle}"
+				styleClass="${symbol_pound}{cc.attrs.captionClass}" />
+			<h:outputText value="${symbol_pound}{cc.attrs.entity.createdOn}"
+				style="${symbol_pound}{cc.attrs.valueStyle}" styleClass="${symbol_pound}{cc.attrs.valueClass}">
+				<f:convertDateTime dateStyle="${symbol_pound}{cc.attrs.dateStyle}" />
+			</h:outputText>			
+		</h:panelGroup>
+		<h:panelGroup layout="block" styleClass="property">
+			<h:outputText value="Modified On" style="${symbol_pound}{cc.attrs.captionStyle}"
+				styleClass="${symbol_pound}{cc.attrs.captionClass}" />
+			<h:outputText value="${symbol_pound}{cc.attrs.entity.modifiedOn}"
+				style="${symbol_pound}{cc.attrs.valueStyle}" styleClass="${symbol_pound}{cc.attrs.valueClass}">
+				<f:convertDateTime dateStyle="${symbol_pound}{cc.attrs.dateStyle}" />
+			</h:outputText>
+		</h:panelGroup>
+
+	</composite:implementation>
+</h:body>
+
+</html>
