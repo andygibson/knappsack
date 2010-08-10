@@ -4,13 +4,13 @@
 	<parent>
 		<groupId>org.fluttercode.knappsack</groupId>
 		<artifactId>knappsack-archetype-parent</artifactId>
-		<version>1.0.3-SNAPSHOT</version>
+		<version>1.0.3</version>
 		<relativePath>../../pom.xml</relativePath>
 	</parent>
 
 	<groupId>org.fluttercode.knappsack</groupId>
 	<artifactId>jee6-minimal-archetype</artifactId>
-	<version>1.0.3-SNAPSHOT</version>
+	<version>1.0.3</version>
 	<packaging>maven-archetype</packaging>
 	<name>Java EE 6 Minimal Archetype</name>
 	<description>Minimal Java EE application with a single page demo of CDI, JSF, JPA and Validation to verify everything works.</description>
