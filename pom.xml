@@ -39,9 +39,9 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/</connection>
-		<developerConnection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/</developerConnection>
-		<url>https://myprojects.sourcerepo.com/myprojects/archetypes/</url>
+		<connection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/trunk/</connection>
+		<developerConnection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/trunk/</developerConnection>
+		<url>https://myprojects.sourcerepo.com/myprojects/archetypes/trunk/</url>
 	</scm>
 
 
