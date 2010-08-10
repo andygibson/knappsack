@@ -10,7 +10,7 @@
 
 	<groupId>org.fluttercode.knappsack</groupId>
 	<artifactId>knappsack-archetype-parent</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 
@@ -39,9 +39,9 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/tags/knappsack-archetype-parent-1.0.2</connection>
-		<developerConnection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/tags/knappsack-archetype-parent-1.0.2</developerConnection>
-		<url>https://myprojects.sourcerepo.com/myprojects/archetypes/tags/knappsack-archetype-parent-1.0.2</url>
+		<connection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/</connection>
+		<developerConnection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/</developerConnection>
+		<url>https://myprojects.sourcerepo.com/myprojects/archetypes/</url>
 	</scm>
 
 

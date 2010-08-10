@@ -4,12 +4,12 @@
 	<parent>
 		<groupId>org.fluttercode.knappsack</groupId>
 		<artifactId>knappsack-archetype-parent</artifactId>
-		<version>1.0.2</version>
+		<version>1.0.3-SNAPSHOT</version>
 	</parent>
 
 	<groupId>org.fluttercode.knappsack</groupId>
 	<artifactId>jee6-sandbox-archetype</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>Java EE 6 Sandbox Archetype</name>
 	<description>Sandbox project for Java EE 6 with CDI, JSF, JPA and a sample model and test data to play around with, try new things, and use as a foundation for tutorials</description>
