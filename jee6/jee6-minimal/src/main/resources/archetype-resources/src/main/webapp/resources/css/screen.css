@@ -59,6 +59,7 @@ body {
 	padding: 8px;
 	margin: 8px;
 	border-top: 1px solid #c0c0c0;
+	clear : both;
 }
 
 .panel {
