@@ -43,7 +43,8 @@
 		<!--
 			Default Implementation that carries additional validators. Should be
 			removed in the event of the server using an alternate validations
-			implementation
+			implementation since the proprietary ones in hibernate won't be
+			available anymore
 		-->
 
 		<dependency>
