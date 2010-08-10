@@ -11,6 +11,7 @@
 	<name>${artifactId}</name>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jetty.version>6.1.4</jetty.version>
 	</properties>
 
