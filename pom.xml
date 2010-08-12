@@ -52,6 +52,7 @@
 		<module>jee6/jee6-sandbox</module>
 		<module>jee6/jee6-sandbox-demo</module>
 		<module>jee6/jee6-servlet-basic</module>
+		<module>jee6/jee6-servlet-demo</module>
 		<module>jee6/jee6-servlet-minimal</module>
 	</modules>
 
