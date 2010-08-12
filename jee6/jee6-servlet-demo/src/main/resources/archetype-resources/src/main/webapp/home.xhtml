@@ -1,0 +1,54 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/template.xhtml">
+	<ui:define name="content">
+		<f:metadata>
+			<f:viewParam name="user" value="${symbol_pound}{homeBean.username}" />
+			<f:viewParam name="tag" value="${symbol_pound}{homeBean.tag}" />
+			<f:viewParam name="firstResult" value="${symbol_pound}{homeBean.firstResult}" />
+		</f:metadata>
+
+		<h:panelGroup styleClass="bookmarks">
+			<h1><h:outputText value="Links" /> <h:outputText
+				value=" by ${symbol_pound}{homeBean.username}" rendered="${symbol_pound}{homeBean.userView}" />
+			<h:outputText value=" tagged with ${symbol_pound}{homeBean.tag}"
+				rendered="${symbol_pound}{homeBean.tagView}" /></h1>
+			<ui:repeat var="v_bm" value="${symbol_pound}{homeBean.bookmarks}">
+				<div class="bookmark">
+				<h1><a href="${symbol_pound}{v_bm.url}">${symbol_pound}{v_bm.title}</a></h1>
+				<div class="description">${symbol_pound}{v_bm.description}</div>
+				<div class="meta">Posted : <h:outputText
+					value="${symbol_pound}{v_bm.addedOn}">
+					<f:convertDateTime dateStyle="medium" />
+				</h:outputText> by <a href="home.jsf?user=${symbol_pound}{v_bm.user.username}">${symbol_pound}{v_bm.user.username}</a>
+				in <ui:repeat value="${symbol_pound}{v_bm.tags}" var="v_tag" varStatus="v_status">
+					<h:outputText value=", " rendered="${symbol_pound}{v_status.index != 0}" />
+					<a href="home.jsf?tag=${symbol_pound}{v_tag.slug}">${symbol_pound}{v_tag.name}</a>
+				</ui:repeat></div>
+				</div>
+			</ui:repeat>
+		</h:panelGroup>
+		<div class="paginator">
+			<h:outputLink value="home.jsf" disabled="${symbol_pound}{!homeBean.hasPrevious}" style="float:left">&lt;&lt; Newer
+				<f:param name="user" value="${symbol_pound}{homeBean.username}" />
+				<f:param name="firstResult" value="${symbol_pound}{homeBean.previousIndex}" />
+				<f:param name="tag" value="${symbol_pound}{homeBean.tag}" />
+			</h:outputLink>
+
+			<h:outputLink value="home.jsf" disabled="${symbol_pound}{!homeBean.hasNext}" style="float:right">Older &gt;&gt;
+			
+				<f:param name="user" value="${symbol_pound}{homeBean.username}" />
+				<f:param name="firstResult" value="${symbol_pound}{homeBean.nextIndex}" />
+				<f:param name="tag" value="${symbol_pound}{homeBean.tag}" />
+			</h:outputLink>
+		</div>
+
+		
+	</ui:define>
+</ui:composition>

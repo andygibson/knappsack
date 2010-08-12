@@ -1,0 +1,87 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/template.xhtml">
+	<ui:define name="content">
+
+
+		<f:metadata>
+			<f:event type="preRenderView" listener="${symbol_pound}{bookmarkerBean.init}" />
+		</f:metadata>
+
+		<h:form id="addPostForm">
+		    <div id="inputForm">
+			<h1>Bookmark Details</h1>
+				<div style="font-size : 120%;margin-bottom : 12px">
+			  	Enter the link details below and select tags to add the the bookmark.
+				</div>			
+				<div class="property">
+					<h:outputText value="Title" styleClass="formCaption" />
+					<h:inputText value="${symbol_pound}{bookmarkerBean.bookmark.title}" id="title" />
+					<h:message for="title" styleClass="errorMessage" />
+				</div>
+
+				<div class="property">
+					<h:outputText value="URL" styleClass="formCaption" />
+					<h:inputText value="${symbol_pound}{bookmarkerBean.bookmark.url}" id="url" />
+					<h:message for="url" styleClass="errorMessage" />
+				</div>
+
+				<div class="property">
+					<h:outputText value="Description" styleClass="formCaption" />
+					<h:inputTextarea value="${symbol_pound}{bookmarkerBean.bookmark.description}" id="description" />					
+					<h:message for="description" styleClass="errorMessage" />
+				</div>
+			</div>
+			
+			<h:panelGroup layout="block" id="tagEditor">
+				<h1>Tags</h1>			
+
+				
+				<div>		
+					<h:inputText value="${symbol_pound}{bookmarkerBean.tagFilter}" autocomplete="off" valueChangeListener="${symbol_pound}{bookmarkerBean.tagSearchUpdate}">
+						<f:ajax execute="@this" render="tagList" event="keyup" />
+					</h:inputText>
+					<h:commandButton action="${symbol_pound}{bookmarkerBean.addNewTag}" value="Add" >
+						<f:ajax execute="@this" render=":addPostForm:tagEditor" />
+					</h:commandButton>
+				</div>						
+							
+				<ui:fragment>
+					<h:panelGroup layout="block" styleClass="tagListContainer" id="tagList">
+						<h2>Available Tags</h2>
+						<div class="tagList">
+							<ui:repeat value="${symbol_pound}{bookmarkerBean.availableTagModel}" var="v_tag">
+								<h:commandLink action="${symbol_pound}{bookmarkerBean.addTagToBookmark}" value="${symbol_pound}{v_tag.name}">
+									<f:ajax execute="@this" render=":addPostForm:tagEditor" />
+								</h:commandLink>
+								<br />
+							</ui:repeat>
+						</div>
+					</h:panelGroup>
+					<h:panelGroup layout="block" styleClass="tagListContainer">
+						<h2>Selected Tags</h2>
+						<div class="tagList">
+							<ui:repeat value="${symbol_pound}{bookmarkerBean.selectedTagModel}" var="v_tag">
+								<h:outputText value="${symbol_pound}{v_tag.name}" style="float:left;width : 60%" />
+								<h:commandLink value="Remove" action="${symbol_pound}{bookmarkerBean.removeTagFromBookmark}">
+									<f:ajax execute="@this" render=":addPostForm:tagEditor" />
+								</h:commandLink>
+								<br />
+							</ui:repeat>
+						</div>
+					</h:panelGroup>
+				</ui:fragment>
+				<div style="clear: both"></div>
+			</h:panelGroup>
+			
+
+			<h:commandButton action="${symbol_pound}{bookmarkerBean.save}" value="Add Link" />
+		</h:form>
+	</ui:define>
+</ui:composition>
