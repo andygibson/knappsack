@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><archetype>
+  <id>jee6-minimal</id>
+  <sources>
+    <source>src\main\java\DataRepository.java</source>
+    <source>src\main\java\DataRepositoryProducer.java</source>
+
+    <source>src\main\java\model\BaseEntity.java</source>
+    <source>src\main\java\model\Person.java</source>
+    <source>src\main\java\model\Teacher.java</source>
+    <source>src\main\java\model\Student.java</source>
+    <source>src\main\java\model\Course.java</source>
+    <source>src\main\java\bean\DataFactory.java</source>
+    <source>src\main\java\qualifier\DataRepository.java</source>
+    <source>src\main\java\bean\DataRepositoryProducer.java</source>
+    <source>src\main\java\bean\DataRepositoryProducerLocal.java</source>
+
+  </sources>
+  <resources>
+    <resource>src\main\resources\META-INF\persistence.xml</resource>
+    <resource>src\main\resources\META-INF\beans.xml</resource>
+    <resource>src\main\webapp\home.xhtml</resource>
+    <resource>src\main\webapp\index.html</resource>
+    <resource>src\main\webapp\META-INF\MANIFEST.MF</resource>
+    <resource>src\main\webapp\META-INF\context.xml</resource>
+    <resource>src\main\webapp\resources\css\screen.css</resource>
+    <resource>src\main\webapp\WEB-INF\jetty-env.xml</resource>
+    <resource>src\main\webapp\WEB-INF\faces-config.xml</resource>
+    <resource>src\main\webapp\WEB-INF\templates\template.xhtml</resource>
+    <resource>src\main\webapp\WEB-INF\web.xml</resource>
+    <resource>readme.txt</resource>
+  </resources>
+</archetype>
