@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><archetype>
   <id>jee6-sandbox</id>
   <sources>
-    <source>src\main\java\org\fluttercode\knappsack\model\Author.java</source>
-    <source>src\main\java\org\fluttercode\knappsack\model\Book.java</source>
-    <source>src\main\java\org\fluttercode\knappsack\model\Category.java</source>
     <source>src\main\java\org\fluttercode\knappsack\model\BaseEntity.java</source>
     <source>src\main\java\org\fluttercode\knappsack\model\Person.java</source>
     <source>src\main\java\org\fluttercode\knappsack\model\Teacher.java</source>

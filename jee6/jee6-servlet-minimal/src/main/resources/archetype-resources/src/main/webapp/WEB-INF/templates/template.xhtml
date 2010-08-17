@@ -13,11 +13,9 @@
 </h:head>
 <h:body>
 	<h:panelGroup id="page" layout="block">
-		<a href="home.jsf">
-			<h:panelGroup id="header" layout="block">
-				<h1>${artifactId}</h1>
-			</h:panelGroup>
-		</a>
+		<h:panelGroup id="header" layout="block">
+			<h1><a href="home.jsf">${artifactId}</a></h1>
+		</h:panelGroup>
 		<h:panelGroup id="container" layout="block">
 			<h:panelGroup id="sidebar" layout="block">			
 			<h1>Sidebar</h1> Content for the sidebar goes here
