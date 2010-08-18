@@ -40,8 +40,6 @@ public class BookmarkDao {
 	 */
 	@SuppressWarnings("unchecked")
 	public User login(String username, String password) {
-		System.out.println("Attempting to log in with " + username + " and "
-				+ password);
 		String ql = "select u from User u where upper(u.username) = upper(:username) and u.password = :password";
 		List<User> results = entityManager.createQuery(ql).setParameter(
 				"username", username).setParameter("password", password)
