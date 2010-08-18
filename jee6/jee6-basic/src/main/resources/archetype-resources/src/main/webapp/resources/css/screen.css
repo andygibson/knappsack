@@ -21,6 +21,10 @@ body {
 	font-size: 250%;
 }
 
+#header a {
+	color : #f0f0f0;
+}
+
 #page {
 	background: #ffffff;
 	width: 960px;

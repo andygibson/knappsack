@@ -21,8 +21,9 @@ body {
 	font-size: 250%;
 }
 
-#header a,#header a:visited {
-	color: #f0f0f0;
+
+#header a {
+	color : #f0f0f0;
 }
 
 #page {

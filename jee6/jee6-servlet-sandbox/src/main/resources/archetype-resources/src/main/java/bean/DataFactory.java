@@ -16,7 +16,6 @@ import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.transaction.NotSupportedException;
 import javax.transaction.SystemException;
-import javax.transaction.UserTransaction;
 
 import ${package}.qualifier.DataRepository;
 import ${package}.model.Course;
@@ -38,8 +37,6 @@ public class DataFactory {
 
 	private static Random random;
 
-	@Resource
-	private UserTransaction utx;
 
 	@Inject
 	@DataRepository
@@ -67,9 +64,9 @@ public class DataFactory {
 
 	}
 
-	public void createData() throws NotSupportedException, SystemException {
+	public void createData() {
 		if (!isDataCreated()) {
-			utx.begin();
+			entityManager.getTransaction().begin();
 			try {
 				random = new Random(102405);
 
@@ -79,9 +76,9 @@ public class DataFactory {
 
 				hookUp();
 				doCustomData();
-				utx.commit();
+				entityManager.getTransaction().commit();
 			} catch (Exception e) {
-				utx.rollback();
+				entityManager.getTransaction().rollback();
 				e.printStackTrace();
 			}
 		}
