@@ -8,6 +8,7 @@
   <resources>
     <resource>src\main\resources\import.sql</resource>
     <resource>src\main\resources\META-INF\persistence.xml</resource>
+    <resource>src\main\resources\MessageResources.properties</resource>    
     <resource>src\main\webapp\home.xhtml</resource>
     <resource>src\main\webapp\index.html</resource>
     <resource>src\main\webapp\META-INF\MANIFEST.MF</resource>
