@@ -6,10 +6,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>${groupId}</groupId>
-	<artifactId>${artifactId}</artifactId>
+	<artifactId>${project.artifactId}ifactId}</artifactId>
 	<packaging>war</packaging>
-	<name>${artifactId}</name>
-	<version>${version}</version>
+{project.artifactId}ject.artifactId}</name>
+	<version>${project.version}version}</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -74,8 +74,7 @@
 		</repository>
 	</repositories>
 
-	<build>
-		<finalName>${artifactId}</finalName>
+	<build>{project.artifactId}me>${project.artifactId}</finalName>
 		<plugins>
 			<!--  Facilitates downloading source and javadoc in Eclipse -->
 			<plugin>
