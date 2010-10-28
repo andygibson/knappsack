@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-                                 ${artifactId}
+                                 ${project.artifactId}ifactId}
 
 
  Created using Knappsack Maven Archetypes. For more information on the 
@@ -38,7 +38,7 @@
   server  with the application deployed. You can see the application by browsing 
   to :
   
-  http://localhost:8080/${artifactId}/home.jsf 
+  http://localhos{project.artifactId}ject.artifactId}/home.jsf 
     
  What's Included?
  ================

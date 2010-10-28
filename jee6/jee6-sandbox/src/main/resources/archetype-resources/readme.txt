@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-                                 ${artifactId}
+                                 ${project.artifactId}ifactId}
 
 
  Created using Knappsack Maven Archetypes. For more information on the 
@@ -41,7 +41,7 @@
  
  Once the application is deployed, it can be viewed using the following URL : 
  
- http://localhost:8080/${artifactId}/home.jsf
+ http://localhos{project.artifactId}ject.artifactId}/home.jsf
  
  This application can be deployed in any Java EE 6 container through the 
  following methods
@@ -55,7 +55,7 @@
     mvn clean package
     
     Maven will clean, build and package the application and you can 
-    manually deploy the resulting target/${artifactId}.war file to your server
+    manually deploy the re{project.artifactId}et/${project.artifactId}.war file to your server
     
  3) You can deploy to JBoss is you have the JBOSS_HOME environment variable 
     set up using :
@@ -94,7 +94,7 @@
  The application has a single page that lists the set of books in the dataset
  and can be seen by going to :
  
- http://localhost:8080/${artifactId}/home.xhtml
+{project.artifactId}lhost:8080/${project.artifactId}/home.xhtml
  
  The expression ${symbol_pound}{books} is used to refer to the list of books and the producer
  for that expression is in the datafactory. 
