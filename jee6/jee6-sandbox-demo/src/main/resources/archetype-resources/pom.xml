@@ -74,7 +74,9 @@
 		</repository>
 	</repositories>
 
-	<build>{project.artifactId}me>${project.artifactId}</finalName>
+	<build>
+		<finalName>${artifactId}</finalName>
+
 		<plugins>
 			<!--  Facilitates downloading source and javadoc in Eclipse -->
 			<plugin>

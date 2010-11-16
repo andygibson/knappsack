@@ -97,7 +97,8 @@
 		</repository>
 	</repositories>
 
-	<build>{project.artifactId}me>${project.artifactId}</finalName>
+	<build>
+		<finalName>${artifactId}</finalName>
 
 		<plugins>
 
