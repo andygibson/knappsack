@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.fluttercode.knappsack</groupId>
 		<artifactId>knappsack-archetype-parent</artifactId>
-		<version>1.0.6-SNAPSHOT</version>
+		<version>1.0.8-SNAPSHOT</version>
 		<relativePath>../../pom.xml</relativePath>
 	</parent>
 
 	<groupId>org.fluttercode.knappsack</groupId>
 	<artifactId>jee6-sandbox-demo-archetype</artifactId>
-	<version>1.0.6-SNAPSHOT</version>
+	<version>1.0.8-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>Java EE 6 Sandbox Demo Archetype</name>
 	<description>Complete demo example using CDI, JSF, JPA and validation showcasing a number of features available in Java EE 6 as well as demonstrating how to make them all work together</description>
