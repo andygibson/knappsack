@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -11,7 +10,7 @@
 
 	<groupId>org.fluttercode.knappsack</groupId>
 	<artifactId>knappsack-archetype-parent</artifactId>
-	<version>1.0.6-SNAPSHOT</version>
+	<version>1.0.7-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 
@@ -39,27 +38,77 @@
 		</license>
 	</licenses>
 
+	<!-- <scm> <connection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/trunk/</connection> 
+		<developerConnection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/trunk/</developerConnection> 
+		<url>https://myprojects.sourcerepo.com/myprojects/archetypes/trunk/</url> 
+		</scm> -->
+
 	<scm>
-		<connection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/trunk/</connection>
-		<developerConnection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/trunk/</developerConnection>
-		<url>https://myprojects.sourcerepo.com/myprojects/archetypes/trunk/</url>
+		<connection>scm:git:git://github.com/andygibson/knappsack.git</connection>
+		<url>http://github.com/andygibson/knappsack</url>
+		<developerConnection>scm:git:git@github.com:andygibson/knappsack.git</developerConnection>
 	</scm>
 
-
-
 	<modules>
-		<module>jee6/jee6-basic</module>
-		<module>jee6/jee6-minimal</module>
-		<module>jee6/jee6-sandbox</module>
-		<module>jee6/jee6-sandbox-demo</module>
-		<module>jee6/jee6-servlet-basic</module>
-		<module>jee6/jee6-servlet-demo</module>
-		<module>jee6/jee6-servlet-minimal</module>
-		<module>jee6/jee6-servlet-sandbox</module>
+		<module>/jee6/jee6-basic</module>
+		<module>/jee6/jee6-minimal</module>
+		<module>/jee6/jee6-sandbox</module>
+		<module>/jee6/jee6-sandbox-demo</module>
+		<module>/jee6/jee6-servlet-basic</module>
+		<module>/jee6/jee6-servlet-demo</module>
+		<module>/jee6/jee6-servlet-minimal</module>
+		<module>/jee6/jee6-servlet-sandbox</module>
 	</modules>
 
 	<build>
 		<finalName>${project.artifactId}-${project.version}</finalName>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<mavenExecutorId>forked-path</mavenExecutorId>
+					<gpg.useagent>true</gpg.useagent>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.3.1</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.4.3</version>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.5</version>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+		</plugins>
 	</build>
 
 </project>
+
+
+
+
