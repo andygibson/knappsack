@@ -1,3 +1,8 @@
+mkdir target
+cd target
+mkdir gen_test
+cd gen_test
+
 rem #DON't RUN IN KNAPPSACK PROJECT FOLDER!
 rem #
 rem #
@@ -12,7 +17,7 @@ rem #set repo = -Dmaven.repo.remote=https://oss.sonatype.org/content/repositorie
 rem #
 rem #
 rem #
-set version=1.0.6-SNAPSHOT
+set version=1.0.8-SNAPSHOT
 set repo=file://C:/temp/maven2repo/
 
 call mvn archetype:generate -DarchetypeGroupId=org.fluttercode.knappsack -DarchetypeArtifactId=jee6-basic-archetype  -DinteractiveMode=false -DarchetypeVersion=%version% -DgroupId=org.application -DartifactId=jee6basic -Dpackage=org.application -DarchetypeRepository=%repo%
