@@ -1,3 +1,4 @@
+call mvn clean
 mkdir target
 cd target
 mkdir gen_test
