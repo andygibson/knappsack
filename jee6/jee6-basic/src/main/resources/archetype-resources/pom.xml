@@ -11,6 +11,7 @@
 {project.artifactId}ject.artifactId}</name>
 	<version>${project.version}</version>
 
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jboss.home>${symbol_dollar}{env.JBOSS_HOME}</jboss.home>
