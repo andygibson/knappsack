@@ -6,11 +6,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>${groupId}</groupId>
-	<artifactId>${project.artifactId}ifactId}</artifactId>
+	<artifactId>${artifactId}</artifactId>
 	<packaging>war</packaging>
-{project.artifactId}ject.artifactId}</name>
-	<version>${project.version}</version>
-
+	<version>${version}</version>
+	<name>${artifactId}</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
