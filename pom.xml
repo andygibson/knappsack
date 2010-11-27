@@ -10,7 +10,7 @@
 
 	<groupId>org.fluttercode.knappsack</groupId>
 	<artifactId>knappsack-parent</artifactId>
-	<version>1.0.8-SNAPSHOT</version>
+	<version>1.0.8</version>
 	<packaging>pom</packaging>
 
 
