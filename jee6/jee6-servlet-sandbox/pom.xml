@@ -4,13 +4,13 @@
 	<parent>
 		<groupId>org.fluttercode.knappsack</groupId>
 		<artifactId>knappsack-parent</artifactId>
-		<version>1.0.8</version>
+		<version>1.0.9-SNAPSHOT</version>
 		<relativePath>../../pom.xml</relativePath>
 	</parent>
 
 	<groupId>org.fluttercode.knappsack</groupId>
 	<artifactId>jee6-servlet-sandbox-archetype</artifactId>
-	<version>1.0.8</version>
+	<version>1.0.9-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>Java EE 6 Servlet Sandbox Archetype</name>
 	<description>Java EE 6 archetype for servlet containers (Jetty,Tomcat) with sandbox data built in.</description>
