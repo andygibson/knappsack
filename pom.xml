@@ -9,7 +9,7 @@
 	</parent>
 
 	<groupId>org.fluttercode.knappsack</groupId>
-	<artifactId>knappsack</artifactId>
+	<artifactId>knappsack-parent</artifactId>
 	<version>1.0.8-SNAPSHOT</version>
 	<packaging>pom</packaging>
 

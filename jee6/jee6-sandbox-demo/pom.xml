@@ -4,7 +4,7 @@
 
 	<parent>
 		<groupId>org.fluttercode.knappsack</groupId>
-		<artifactId>knappsack-archetype-parent</artifactId>
+		<artifactId>knappsack-parent</artifactId>
 		<version>1.0.8-SNAPSHOT</version>
 		<relativePath>../../pom.xml</relativePath>
 	</parent>
