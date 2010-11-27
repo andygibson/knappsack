@@ -1,3 +1,8 @@
+2010-11-27 
+Changed the JBoss repository site to the latest one
+Added string resource bundle to the JSF project and added a single item to be displayed in the footer
+
+
 2010-08-19 Version 1.0.5 released
 Added servlet demo archetypes
 
