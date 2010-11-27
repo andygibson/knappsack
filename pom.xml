@@ -38,11 +38,6 @@
 		</license>
 	</licenses>
 
-	<!-- <scm> <connection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/trunk/</connection> 
-		<developerConnection>scm:svn:https://myprojects.sourcerepo.com/myprojects/archetypes/trunk/</developerConnection> 
-		<url>https://myprojects.sourcerepo.com/myprojects/archetypes/trunk/</url> 
-		</scm> -->
-
 	<scm>
 		<connection>scm:git:git://github.com/andygibson/knappsack.git</connection>
 		<url>http://github.com/andygibson/knappsack</url>
