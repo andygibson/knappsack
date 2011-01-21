@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-                                 ${project.artifactId}ifactId}
+                                 ${project.artifactId}
 
 
  Created using servlet Knappsack Maven Archetypes. For more information on the 
