@@ -1,4 +1,10 @@
-2011-xx-xx
+2011-x-02 - version 1.0.10
+Added spring-mvc-jpa archetype
+Changed the description to start with Java EE 6 knappsack archetype since I think Netbeans lists archetypes by description
+Changed the java version to default to 1.5
+
+
+2011-22-01 - version 1.0.9
 Use the JBoss spec bom instead of the broken one
 Removed the java.net repository since we don't need it for the spec.
 
