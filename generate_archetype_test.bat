@@ -18,7 +18,7 @@ rem #set repo = -Dmaven.repo.remote=https://oss.sonatype.org/content/repositorie
 rem #
 rem #
 rem #
-set version=1.0.8-SNAPSHOT
+set version=1.0.10-SNAPSHOT
 set repo=file://C:/temp/maven2repo/
 
 call mvn archetype:generate -DarchetypeGroupId=org.fluttercode.knappsack -DarchetypeArtifactId=jee6-basic-archetype  -DinteractiveMode=false -DarchetypeVersion=%version% -DgroupId=org.application -DartifactId=jee6basic -Dpackage=org.application -DarchetypeRepository=%repo%
@@ -35,5 +35,7 @@ call mvn archetype:generate -DarchetypeGroupId=org.fluttercode.knappsack -Darche
 
 call mvn archetype:generate -DarchetypeGroupId=org.fluttercode.knappsack -DarchetypeArtifactId=jee6-servlet-sandbox-archetype -DinteractiveMode=false -DarchetypeVersion=%version% -DgroupId=org.application -DartifactId=servletsandbox -Dpackage=org.application -DarchetypeRepository=%repo%
 
-
 call mvn archetype:generate -DarchetypeGroupId=org.fluttercode.knappsack -DarchetypeArtifactId=jee6-servlet-demo-archetype -DinteractiveMode=false -DarchetypeVersion=%version% -DgroupId=org.application -DartifactId=servletdemol -Dpackage=org.application -DarchetypeRepository=%repo%
+
+call mvn archetype:generate -DarchetypeGroupId=org.fluttercode.knappsack -DarchetypeArtifactId=spring-mvc-jpa-archetype -DinteractiveMode=false -DarchetypeVersion=%version% -DgroupId=org.application -DartifactId=spring-mvc-jpa  -Dpackage=org.application -DarchetypeRepository=%repo%
+
