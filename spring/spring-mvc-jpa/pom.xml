@@ -16,7 +16,7 @@
 	<packaging>maven-archetype</packaging>
 
 	<name>spring-mvc-jpa-archetype</name>
-	<description>Spring MVC archetype with setup for JPA</description>
+	<description>Spring MVC Knappsack archetype with setup for JPA</description>
 
 	<build>
 		<extensions>
