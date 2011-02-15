@@ -13,7 +13,7 @@
 	<version>1.0.10-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>Java EE 6 Servlet Demo Archetype</name>
-	<description>Bookmarking application demonstrating JSF, CDI, JPA and Bean Validation on Tomcat/Jetty servlet containers</description>
+	<description>Java EE 6 Knappsack archetype containing servlet based bookmarking application demonstrating JSF, CDI, JPA and Bean Validation on Tomcat/Jetty servlet containers</description>
 	<build>
 		<extensions>
 			<extension>

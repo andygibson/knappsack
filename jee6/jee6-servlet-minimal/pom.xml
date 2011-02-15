@@ -13,7 +13,7 @@
 	<version>1.0.10-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>Java EE 6 Servlet Minimal Archetype</name>
-	<description>Minimal Java EE application for servlet containers (Jetty,Tomcat) with a single page demo of CDI, JSF, JPA and Validation to verify everything works.</description>
+	<description>Java EE 6 Knappsack archetype containing a minimal Java EE application for servlet containers (Jetty,Tomcat) with a single page demo of CDI, JSF, JPA and Validation to verify everything works.</description>
 	<build>
 		<extensions>
 			<extension>

@@ -15,7 +15,7 @@
 	<version>1.0.10-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>Java EE 6 Basic Archetype</name>
-	<description>Basic Java EE application with just configuration for CDI, JSF, JPA and a sample empty page.</description>
+	<description>Java EE 6 Knappsack archetype with configuration for CDI, JSF, JPA and a sample empty page.</description>
 	<build>
 		<extensions>
 			<extension>

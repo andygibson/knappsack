@@ -14,7 +14,7 @@
 	<version>1.0.10-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>Java EE 6 Sandbox Demo Archetype</name>
-	<description>Complete demo example using CDI, JSF, JPA and validation showcasing a number of features available in Java EE 6 as well as demonstrating how to make them all work together</description>
+	<description>Java EE 6 Knappsack archetype containing a complete demo example using CDI, JSF, JPA and validation showcasing a number of features available in Java EE 6 as well as demonstrating how to make them all work together</description>
 	<build>
 		<extensions>
 			<extension>

@@ -13,7 +13,7 @@
 	<version>1.0.10-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>Java EE 6 Servlet Sandbox Archetype</name>
-	<description>Java EE 6 archetype for servlet containers (Jetty,Tomcat) with sandbox data built in.</description>
+	<description>Java EE 6 Knappsack archetype for servlet containers (Jetty,Tomcat) with sandbox data built in.</description>
 	<build>
 		<extensions>
 			<extension>
