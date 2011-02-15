@@ -9,6 +9,7 @@
 		<version>1.0.10-SNAPSHOT</version>
 		<relativePath>../../pom.xml</relativePath>
 	</parent>
+
 	
 	<groupId>org.fluttercode.knappsack</groupId>
 	<artifactId>spring-mvc-jpa-archetype</artifactId>

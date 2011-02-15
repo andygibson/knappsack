@@ -21,7 +21,7 @@
 	</properties>
 	<dependencies>
 		<!-- Spring -->
-		<dependency>
+		<dependency> 
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>${org.springframework-version}</version>
