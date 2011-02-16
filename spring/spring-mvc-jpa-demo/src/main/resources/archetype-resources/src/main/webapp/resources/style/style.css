@@ -1,0 +1,25 @@
+body {
+	font-family: arial, tahoma;
+}
+
+.property {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.property .caption {
+	float: left;
+	width: 200px;
+}
+
+.entryForm {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	height : 100%;	
+}
+
+.error {
+	color : red;
+	font-weight: bold;
+	}
