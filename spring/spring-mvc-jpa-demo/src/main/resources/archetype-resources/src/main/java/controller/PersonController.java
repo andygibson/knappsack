@@ -45,9 +45,9 @@ public class PersonController {
 	
 	@RequestMapping(method=RequestMethod.POST,value="edit") 
 	public String savePerson(@ModelAttribute Person person) {
-		logger.debug("Received postback on person "+person);
+		logger.debug("Received postback on person "+person);		
 		personDao.save(person);
-		return "redirect:/person/list";
+		return "redirect:list";
 		
 	}
 	

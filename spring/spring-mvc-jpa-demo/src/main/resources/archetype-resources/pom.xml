@@ -5,7 +5,7 @@
 	<artifactId>${artifactId}</artifactId>
 	<packaging>war</packaging>
 	<version>${version}</version>
-	<name>spring-mvc-jpa</name>
+	<name>${artifactId}</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -180,6 +180,13 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.1.2</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 
 	<repositories>
@@ -201,7 +208,7 @@
 	</repositories>
 
 	<build>
-		<finalName>spring-mvc-jpa</finalName>
+		<finalName>${artifactId}</finalName>
 		<plugins>
 
 			<!-- Facilitates downloading source and javadoc in Eclipse -->

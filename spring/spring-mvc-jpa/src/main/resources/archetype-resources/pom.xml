@@ -5,7 +5,7 @@
 	<artifactId>${artifactId}</artifactId>
 	<packaging>war</packaging>
 	<version>${version}</version>
-	<name>spring-mvc-jpa</name>
+	<name>${artifactId}</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -201,7 +201,7 @@
 	</repositories>
 
 	<build>
-		<finalName>spring-mvc-jpa</finalName>
+		<finalName>${artifactId}</finalName>
 		<plugins>
 
 			<!-- Facilitates downloading source and javadoc in Eclipse -->

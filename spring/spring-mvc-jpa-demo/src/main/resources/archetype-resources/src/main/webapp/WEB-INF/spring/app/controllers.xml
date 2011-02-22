@@ -13,13 +13,5 @@
 	<!-- Scans within the base package of the application for @Components to 
 		configure as beans -->
 	<context:component-scan base-package="${package}" />
-
 	<tx:annotation-driven />
-	<mvc:annotation-driven />
-
-	<mvc:resources mapping="/resources/**" location="/resources/" />
-
-	<bean id="validator"
-		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
-
 </beans>
