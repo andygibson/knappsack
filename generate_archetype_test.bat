@@ -39,3 +39,5 @@ call mvn archetype:generate -DarchetypeGroupId=org.fluttercode.knappsack -Darche
 
 call mvn archetype:generate -DarchetypeGroupId=org.fluttercode.knappsack -DarchetypeArtifactId=spring-mvc-jpa-archetype -DinteractiveMode=false -DarchetypeVersion=%version% -DgroupId=org.application -DartifactId=spring-mvc-jpa  -Dpackage=org.application -DarchetypeRepository=%repo%
 
+call mvn archetype:generate -DarchetypeGroupId=org.fluttercode.knappsack -DarchetypeArtifactId=spring-mvc-jpa-demo-archetype -DinteractiveMode=false -DarchetypeVersion=%version% -DgroupId=org.application -DartifactId=spring-mvc-jpa-demo  -Dpackage=org.application -DarchetypeRepository=%repo%
+
