@@ -41,7 +41,6 @@ public abstract class Person extends BaseEntity {
 	private String lastName;
 
 	public Person() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public Person(String firstName, String lastName) {

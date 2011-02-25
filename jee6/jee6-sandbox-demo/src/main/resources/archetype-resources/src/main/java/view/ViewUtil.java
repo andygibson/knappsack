@@ -91,7 +91,6 @@ public class ViewUtil {
 			FacesContext.getCurrentInstance().getExternalContext()
 					.redirect(url);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
