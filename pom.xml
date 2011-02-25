@@ -54,6 +54,7 @@
 		<module>/jee6/jee6-servlet-demo</module>
 		<module>/jee6/jee6-servlet-minimal</module>
 		<module>/jee6/jee6-servlet-sandbox</module>
+		<module>/spring/spring-jsf-jpa</module>
 		<module>/spring/spring-mvc-jpa</module>
 		<module>/spring/spring-mvc-jpa-demo</module>
 	</modules>
