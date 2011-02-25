@@ -1,0 +1,33 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	template="/WEB-INF/templates/template.xhtml">
+	<ui:define name="content">
+		<h1><h:outputText value="Hello From JSF" /></h1>
+		Message : ${symbol_pound}{homeBean.message}<br />
+		<br />
+		<h2>Tasks</h2>
+		<table>
+			<ui:repeat value="${symbol_pound}{taskHome.tasks}" var="v_task">
+				<tr>
+					<td>${symbol_pound}{v_task.id}</td>
+					<td>${symbol_pound}{v_task.description}</td>
+				</tr>
+			</ui:repeat>
+		</table>
+
+		<h:form>
+			<div
+				style="border-top: 1px solid ${symbol_pound}d0d0d0; margin-top: 12px; padding-top: 12px">
+				<h:inputText value="${symbol_pound}{taskHome.task.description}" id="taskDesc"/><h:commandButton
+				action="${symbol_pound}{taskHome.saveTask}" value="Add" /><h:message for="taskDesc" style="color : red;padding-left : 8px"/></div>
+
+		</h:form>
+
+	</ui:define>
+</ui:composition>
