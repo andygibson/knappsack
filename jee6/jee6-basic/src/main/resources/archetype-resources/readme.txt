@@ -46,7 +46,7 @@
  
  Once the application is deployed, it can be viewed using the following URL : 
  
- http://localhos{project.artifactId}ject.artifactId}/home.jsf
+ http://localhost:8080/{project.artifactId}/home.jsf
  
  This application can be deployed in any Java EE 6 container through the 
  following methods

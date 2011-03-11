@@ -37,7 +37,7 @@
   start the server with the application deployed. You can then see the application 
   by browsing to :
   
-  http://localhos{project.artifactId}ject.artifactId}/
+  http://localhost:8080/{project.artifactId}/home.jsf
   
       
  What's Included?
