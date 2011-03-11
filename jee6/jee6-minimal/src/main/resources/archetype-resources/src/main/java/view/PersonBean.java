@@ -10,7 +10,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import ${package}.model.Person;
-import ${package}.bean.PersonDaoLocal;
+import ${package}.bean.PersonDao;
 
 
 @Named("personBean")
@@ -18,7 +18,7 @@ import ${package}.bean.PersonDaoLocal;
 public class PersonBean {
 
 	@Inject 
-	private PersonDaoLocal personDao;	
+	private PersonDao personDao;	
 	
 	private Person person = new Person();
 	

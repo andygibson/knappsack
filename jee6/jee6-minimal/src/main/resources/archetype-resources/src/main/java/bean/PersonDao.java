@@ -15,12 +15,11 @@ import ${package}.model.Person;
 /**
  * Simple PersonDao bean that handles persisting a person entity and returning a
  * list of people in the database. Implemented as an EJB for the transaction
- * facilities. Implements the {@link PersonDaoLocal} interface but shouldn't be
- * needed with EJB 3.1 except Weld has issues looking up no-interface EJBs.
+ * facilities. 
  * 
  */
 @Stateless
-public class PersonDao implements PersonDaoLocal {
+public class PersonDao {
 
 	@Inject
 	@DataRepository

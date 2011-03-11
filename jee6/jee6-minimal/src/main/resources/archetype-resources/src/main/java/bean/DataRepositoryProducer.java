@@ -17,12 +17,9 @@ import ${package}.qualifier.DataRepository;
  * {@link Produces} annotated method. We qualify the producer with the
  * {@link DataRepository} qualifier.
  * 
- * The Local interface isn't needed in a typical EJB 3.1 environment but CDI
- * cannot find no-local interface beans.
- * 
  */
 @Stateless
-public class DataRepositoryProducer implements DataRepositoryProducerLocal {
+public class DataRepositoryProducer {
 	
 	
 	private EntityManager entityManager;
