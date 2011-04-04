@@ -4,7 +4,7 @@
 
   <groupId>org.fluttercode.knappsack</groupId>
   <artifactId>spring-jsf-jpa-archetype</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.10-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>spring-jsf-jpa-archetype</name>
