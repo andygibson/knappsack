@@ -5,13 +5,13 @@
   <parent>
 	<groupId>org.fluttercode.knappsack</groupId>
 	<artifactId>knappsack-parent</artifactId>
-	<version>1.0.10-SNAPSHOT</version>
+	<version>1.0.10</version>
 	<relativePath>../../pom.xml</relativePath>
   </parent>
 
   <groupId>org.fluttercode.knappsack</groupId>
   <artifactId>spring-mvc-jpa-archetype</artifactId>
-  <version>1.0.10-SNAPSHOT</version>
+  <version>1.0.10</version>
   <packaging>maven-archetype</packaging>
 
   <name>spring-mvc-jpa-archetype</name>

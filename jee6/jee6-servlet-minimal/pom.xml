@@ -4,13 +4,13 @@
 	<parent>
 		<groupId>org.fluttercode.knappsack</groupId>
 		<artifactId>knappsack-parent</artifactId>
-		<version>1.0.10-SNAPSHOT</version>
+		<version>1.0.10</version>
 		<relativePath>../../pom.xml</relativePath>
 	</parent>
 
 	<groupId>org.fluttercode.knappsack</groupId>
 	<artifactId>jee6-servlet-minimal-archetype</artifactId>
-	<version>1.0.10-SNAPSHOT</version>
+	<version>1.0.10</version>
 	<packaging>maven-archetype</packaging>
 	<name>Java EE 6 Servlet Minimal Archetype</name>
 	<description>Java EE 6 Knappsack archetype containing a minimal Java EE application for servlet containers (Jetty,Tomcat) with a single page demo of CDI, JSF, JPA and Validation to verify everything works.</description>
