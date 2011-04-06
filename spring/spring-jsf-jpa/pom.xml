@@ -2,13 +2,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <parent>
+	<groupId>org.fluttercode.knappsack</groupId>
+	<artifactId>knappsack-parent</artifactId>
+	<version>1.0.11-SNAPSHOT</version>
+	<relativePath>../../pom.xml</relativePath>
+  </parent>
+
   <groupId>org.fluttercode.knappsack</groupId>
   <artifactId>spring-jsf-jpa-archetype</artifactId>
   <version>1.0.11-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>spring-jsf-jpa-archetype</name>
-
+  <description>Spring Knappsack archetype application with setup for JPA and JSF</description>
+ 
   <build>
     <extensions>
       <extension>
@@ -28,3 +36,4 @@
     </pluginManagement>
   </build>
 </project>
+
